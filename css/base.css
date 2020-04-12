@@ -2,18 +2,22 @@
 * @Author: WRBH
 * @Date:   2020-04-10 13:04:01
 * @Last Modified by:   WRBH
-* @Last Modified time: 2020-04-10 16:07:28
+* @Last Modified time: 2020-04-12 18:44:19
 */
 /*BEM Design model*/
 *{
     margin: 0;
     padding: 0;
     font-family: "Arial";
+    color: #5f5e5e; 
 }
 a{
-    color:#14191e;
     text-decoration: none;
 }
-a:hover{
+h2,h3{
+    font-weight: normal;
+}
+b{
     color: #f01400;
+    font-weight: normal; 
 }
