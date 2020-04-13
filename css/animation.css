@@ -1,0 +1,227 @@
+/*
+* @Author: WRBH
+* @Date:   2020-04-13 12:10:36
+* @Last Modified by:   WRBH
+* @Last Modified time: 2020-04-13 17:02:13
+*/
+
+/*First Screen Animation*/
+.screen-1__heading,
+.screen-1__phone,
+.screen-1__shadow{
+    transition: all .8s;
+}
+.screen-1__shadow_animate_init,
+.screen-1__heading_animate_init{
+    transform: translate(0,100%);
+    opacity: 0;
+}
+.screen-1__phone_animate_init{
+    transform: translate(0,-100%);
+    opacity: 0;
+}
+.screen-1__shadow_animate_init{
+    transform: scale(2);
+}
+.screen-1__heading_animate_done,
+.screen-1__phone_animate_done,
+.screen-1__shadow_animate_done{
+    transform: translate(0,0);
+    opacity: 1;
+}
+
+/*Second Screen Animation*/
+.screen-2__heading,
+.screen-2__phone,
+.screen-2__subheading{
+    transition: all .8s;
+}
+.screen-2__phone_animate_init{
+    transform: translate(0,50%);
+    opacity: 0;
+}
+.screen-2__subheading_animate_init{
+    transform: translate(0,100%);
+    opacity: 0;
+}
+
+.screen-2__heading_animate_init{
+    transform: translate(0,-100%);
+    opacity: 0;
+}
+.screen-2__phone_animate_done,
+.screen-2__subheading_animate_done,
+.screen-2__heading_animate_done{
+    transform: translate(0,0);
+    opacity: 1;
+}
+.screen-2__pointer_position-1{
+    transition: all .8s .3s;
+}
+.screen-2__pointer_position-2{
+    transition: all .8s .6s;
+}
+.screen-2__pointer_position-3{
+    transition: all .8s .9s;
+}
+
+.screen-2__pointer_position-1_animate_init{
+    transform: translate(-100%,0);
+    opacity: 0;
+}
+.screen-2__pointer_position-2_animate_init,
+.screen-2__pointer_position-3_animate_init{
+    transform: translate(100%,0);
+    opacity: 0;
+}
+.screen-2__pointer_position-1_animate_done,
+.screen-2__pointer_position-2_animate_done,
+.screen-2__pointer_position-3_animate_done{
+    transform: translate(0,0);
+    opacity: 1;
+}
+
+/*Third Screen Animation*/
+.screen-3__heading,
+.screen-3__phone,
+.screen-3__subheading,
+.screen-3__features{
+    transition: all .8s;
+}
+.screen-3__phone_animate_init{
+    transform: translate(0,50%);
+    opacity: 0;
+}
+.screen-3__subheading_animate_init{
+    transform: translate(0,100%);
+    opacity: 0;
+}
+
+.screen-3__heading_animate_init{
+    transform: translate(0,-100%);
+    opacity: 0;
+}
+.screen-3__phone_animate_done,
+.screen-3__subheading_animate_done,
+.screen-3__heading_animate_done{
+    transform: translate(0,0);
+    opacity: 1;
+}
+.screen-3__features_animate_init{
+    transform: scale(.5);
+    opacity: 0;
+}
+.screen-3__features_animate_done{
+    transform: scale(1);
+    opacity: 1;
+}
+.screen-3__features-items{
+    transition: all .3s;
+    cursor: pointer;
+}
+.screen-3__features-items:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #fff;
+}
+
+/*Fourth Screen Animation*/
+.screen-4__heading,
+.screen-4__subheading{
+    transition: all .8s;
+}
+.screen-4__subheading_animate_init{
+    transform: translate(0,100%);
+    opacity: 0;
+}
+
+.screen-4__heading_animate_init{
+    transform: translate(0,-100%);
+    opacity: 0;
+}
+.screen-4__models-item-i-1_animate_init,
+.screen-4__models-item-i-2_animate_init,
+.screen-4__models-item-i-3_animate_init,
+.screen-4__models-item-i-4_animate_init{
+    transform: scale(.8);
+    opacity: 0;
+}
+.screen-4__models-item-i-1_animate_done,
+.screen-4__models-item-i-2_animate_done,
+.screen-4__models-item-i-3_animate_done,
+.screen-4__models-item-i-4_animate_done{
+    transform: scale(1);
+    opacity: 1;
+}
+.screen-4__models-item-i-1{
+    transition: all .4s;
+}
+.screen-4__models-item-i-2{
+    transition: all .4s .4s;
+}
+.screen-4__models-item-i-3{
+    transition: all .4s .8s;
+}
+.screen-4__models-item-i-4{
+    transition: all .4s 1.2s;
+}
+
+/*Fifth Screen Animation*/
+.screen-5__heading,
+.screen-5__bg,
+.screen-5__subheading{
+    transition: all .8s;
+}
+.screen-5__bg_animate_init,
+.screen-5__subheading_animate_init{
+    transform: translate(0,100%);
+    opacity: 0;
+}
+.screen-5__heading_animate_init{
+    transform: translate(0,-100%);
+    opacity: 0;
+}
+.screen-5__subheading_animate_done,
+.screen-5__heading_animate_done,
+.screen-5__bg_animate_done{
+    transform: translate(0,0);
+    opacity: 1;
+}
+
+/*Sixth Screen Animation*/
+.screen-6__button{
+    transition: all .3s;
+}
+.screen-6__button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #fff;
+}
+
+/*Frame Animation*/
+@-webkit-keyframes bounce{
+    0%,100%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(1);
+    }
+}
+.screen-2__pointer:before,
+.screen-2__pointer:after{
+    content: ' ';
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+    top: 1px;
+    left: 6px;
+    background-color: rgba(255,0,0,0.4);
+    -webkit-animation:bounce 2s infinite;
+}
+.screen-2__pointer:before{
+        -webkit-animation:bounce 2s infinite 1s;
+}
+.screen-2__pointer_position-1:before,
+.screen-2__pointer_position-1:after{
+    left: 213px;
+}

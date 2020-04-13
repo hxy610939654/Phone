@@ -2,7 +2,7 @@
 * @Author: WRBH
 * @Date:   2020-04-10 13:58:23
 * @Last Modified by:   WRBH
-* @Last Modified time: 2020-04-12 19:31:33
+* @Last Modified time: 2020-04-13 16:55:37
 */
 /*BEM Design model*/
 
@@ -132,7 +132,6 @@
     bottom: -345px;
 }
 .screen-2__pointer{
-    width: 125px;
     height: 22px;
     padding-right: 112px;
     font-size: 24px;
@@ -342,12 +341,6 @@
     display: inline-block;
     border-radius: 4px;
     transition: all .5s;
-}
-.screen-6__button:hover{
-    height: 84px;
-    width: 244px;
-    box-shadow: 0px 0px 10px rgba(255,255,255,0.5);
-    font-size: 26px;
 }
 
 
