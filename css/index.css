@@ -2,7 +2,7 @@
 * @Author: WRBH
 * @Date:   2020-04-10 13:58:23
 * @Last Modified by:   WRBH
-* @Last Modified time: 2020-04-14 17:26:32
+* @Last Modified time: 2020-04-14 18:30:59
 */
 /*BEM Design model*/
 
@@ -45,13 +45,15 @@
     font-size: 14px;
     display: block;
     height: 38px;
+    width: 80px;
+    text-align: center;
     float: left;
-    margin-left: 40px;
+    padding-left: 40px;
     line-height: 38px;
     position: relative;
 }
 .header__nav-item_status_active{color: #f01400;}
-.header__nav-item_status_active::after{
+/*.header__nav-item_status_active::after{
     content: ' ';
     display: block;
     width: 100%;
@@ -60,17 +62,27 @@
     background-color: #f01400;
     left:0;
     bottom: 0;
-}
+}*/
 .header__nav-item_custom_button{
     width: 90px;
-    background: #000;
+    background: #f01400;
     color: #f4f4f5;
     text-align: center;
     border-radius: 3px;
+    padding:0;
+    margin-left: 40px;
 }
-.header__nav-item_custom_button:hover{
-    font-size: 16px;
+.header__nav-slider{
+    position: absolute;
+    width: 80px;
+    height: 2px;
+    background-color: #f01400;
+    bottom: 0;
+    left: 0;
+    transition: all .5s;
+    margin-left: 40px;
 }
+
 
 /*first screen*/
 .screen-1{

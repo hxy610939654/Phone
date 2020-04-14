@@ -2,7 +2,7 @@
 * @Author: WRBH
 * @Date:   2020-04-14 13:21:22
 * @Last Modified by:   WRBH
-* @Last Modified time: 2020-04-14 17:32:01
+* @Last Modified time: 2020-04-14 19:01:32
 */
 
 var getElem = function(selector){
@@ -88,14 +88,40 @@ var playScreenAnimateDone = function(screenCls){
 
 window.onload = function(){
     for(k in screenAnimateElements){
-    setScreenAnimateInit(k);
+        if (k === '.screen-1') {
+            continue;
+        }
+        setScreenAnimateInit(k);
     }
+}
+// Slider animation
+var navItems = getAllElem('.header__nav-item'),
+    outlineItems = getAllElem('.outline__item'),
+    navSlider = getElem('.header__nav-slider'),
+    setSlider = function(idx,lib){
+    lib[idx].onmouseover=function(){
+        if(idx * 120 < 600){
+        navSlider.style.left = (idx * 120) + 'px';
+        }
+    }
+    var acviveIdx=0;  
+    lib[idx].onmouseout=function(){
+        for (var i=0; i<lib.length-1; i++) {
+            if (getCls(lib[i]).indexOf('header__nav-item_status_active')>-1) {
+                acviveIdx = i;
+                break ;
+            }
+        }
+        navSlider.style.left=(acviveIdx * 120) + 'px';
+    }
+};
+
+for(var i =0;i<navItems.length;i++){
+    setSlider(i,navItems)
 }
 
 // Scroll animation
-var navItems = getAllElem('.header__nav-item'),
-    outlineItems = getAllElem('.outline__item'),
-    switchNameItem = function(idx){
+var switchNameItem = function(idx){
         for(var i = 0; i<navItems.length;i++){
             delCls(navItems[i],'header__nav-item_status_active');
         }
@@ -104,6 +130,9 @@ var navItems = getAllElem('.header__nav-item'),
             delCls(outlineItems[i],'outline__item_status_active');
         }
         addCls(outlineItems[idx],'outline__item_status_active');
+        if(idx * 120 < 600){
+        navSlider.style.left = (idx * 120) + 'px';
+        }
     };
 switchNameItem(0);
 window.onscroll = function(){
@@ -139,8 +168,8 @@ window.onscroll = function(){
 var setNavJump = function(i,lib){
         var item = lib[i];
         item.onclick = function(){
-            document.body.scrollTop=i*800+1;
-            document.documentElement.scrollTop=i*800+1;
+            document.body.scrollTop=i*800;
+            document.documentElement.scrollTop=i*800;
         }
     };
 
@@ -151,3 +180,6 @@ for(var i=0;i<outlineItems.length;i++){
     setNavJump(i,outlineItems);
 }
 
+setTimeout(function(){
+    playScreenAnimateDone('.screen-1')
+},500)
