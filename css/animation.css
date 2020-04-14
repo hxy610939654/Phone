@@ -2,8 +2,27 @@
 * @Author: WRBH
 * @Date:   2020-04-13 12:10:36
 * @Last Modified by:   WRBH
-* @Last Modified time: 2020-04-13 17:02:13
+* @Last Modified time: 2020-04-14 17:26:30
 */
+
+/*Header status*/
+.header{
+    transition: all 1s;
+}
+.header_status_black{
+    background-color: rgba(0,0,0,.5);
+}
+.header_status_black .header__logo,
+.header_status_black .header__nav-item{
+    color: #fff;
+}
+.header_status_black .header__nav-item_status_active{
+    color: #f01400;
+}
+.outline__item_status_active{
+    color: #f01400;
+}
+
 
 /*First Screen Animation*/
 .screen-1__heading,
@@ -117,7 +136,7 @@
 }
 .screen-3__features-items{
     transition: all .3s;
-    cursor: pointer;
+    display: block;
 }
 .screen-3__features-items:hover{
     transform: scale(1.1);
@@ -196,6 +215,18 @@
     box-shadow: 0 0 10px #fff;
 }
 
+/*Outline status*/
+.outline{
+    transition: all 1s;
+    opacity: 0;
+    transform: translate(100%,0);
+}
+.outline_status_in{
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+
 /*Frame Animation*/
 @-webkit-keyframes bounce{
     0%,100%{
@@ -223,5 +254,5 @@
 }
 .screen-2__pointer_position-1:before,
 .screen-2__pointer_position-1:after{
-    left: 213px;
+    left: 212px;
 }
