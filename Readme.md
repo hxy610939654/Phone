@@ -1,2 +1,2 @@
 #Phone
-Smart phone promotion page case study
+Smart phone promotion page demo case study
